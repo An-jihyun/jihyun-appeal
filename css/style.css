@@ -85,14 +85,28 @@ header {
 
 /* 네모 div 스타일 */
 .square {
-    width: 100px;
-    height: 100px;
+    width: 30rem;
+    height: 150px;
+    border-radius: 25px;
+    border: 7px solid #051e4c;
     background-color: #fff;
     position: relative;
     margin: 0 auto;
     top: -200px; /* 네모 div가 초기에 화면 위로 숨겨짐 */
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease; /* 슬라이드와 투명도 변화 */
+}
+
+.square_profile {
+    background-color: #0b3c91;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.square_img {
+    width: 60px;
+    border-radius: 50%;
 }
 
 /* 네모 div가 나타날 때 */
