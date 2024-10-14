@@ -1,0 +1,85 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+  
+  /* body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+  } */
+  
+  .slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    margin-left: 20%;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .slide {
+    min-width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .arrow {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    transition: background 0.3s;
+  }
+  
+  .arrow:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(120, 255, 253, 0.6);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: rgb(122, 193, 255);
+  }
+  
+  .dot:hover {
+    background-color: rgba(135, 145, 255, 0.8);
+  }

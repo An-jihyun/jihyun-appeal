@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;  /* #1 */
+        align-items: flex-start; /* #2 */
+				padding: 8px 24px; /* #6 */
+    }
+    .navbar__menu {
+        flex-direction: column; /* #2 */
+        align-items:center; /* #2 */
+        width: 100%; /* #3 */
+    }
+    .navbar__menu li { /* #5 */
+        width: 100%;
+        text-align : center;
+    }  
+}
