@@ -119,10 +119,11 @@
 
 .comments {
     position: absolute;
-    top: 250px;
+    top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
 }
 
 .comment {
@@ -237,16 +238,6 @@
     }
 }
 
-/* @keyframes commentSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
 .bubble {
     border-radius: 50px;
 }
@@ -303,48 +294,40 @@
 
 /* 스크롤 시 나타날 문구 스타일 */
 .scrolling_section {
-    height: 150vh; /* 스크롤 가능한 높이 */
+    height: 50%; /* 스크롤 가능한 높이 */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    position: absolute;
+    justify-content: space-between;
+    margin: 0px 3rem;
 }
 
 .slide_in_text {
     position: relative;
-    width: 100%;
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     opacity: 0; /* 초기 상태에서 보이지 않음 */
     transform: translateX(0);
-    transition: transform 1s ease, opacity 1s ease;
+    transition: transform 3s ease, opacity 1s ease;
     text-align: center;
     white-space: nowrap;
-    color: #fff;
+    color: #ffffff;
     margin: 100px 0;
-    visibility: hidden; /* 보이지 않게 설정 */
+
 }
 
 .left {
     transform: translateX(-100%); /* 왼쪽에서 시작 */
-}
-
-.right {
+  }
+  
+  .right {
     transform: translateX(100%); /* 오른쪽에서 시작 */
-}
-
-/* 애니메이션 적용 시 */
-.show {
-    opacity: 1; /* show 클래스 추가 시 나타남 */
-    visibility: visible; /* show 클래스가 추가되면 보이도록 설정 */
-}
-
-.left.show {
+  }
+  
+  /* 애니메이션 적용 시 */
+  .show {
+    opacity: 1;
     transform: translateX(0);
-}
-
-.right.show {
-    transform: translateX(0);
-}
+  }
 
 /* 직사각형 링크 스타일 */
 .rectangles_section {
@@ -353,6 +336,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-top: 50%;
 }
 
 .rectangles_section p {
