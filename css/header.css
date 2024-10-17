@@ -1,5 +1,5 @@
 .header {
-    background: linear-gradient(180deg, #0b3c91, #1d2951 70%, #26375f);
+    background: linear-gradient(180deg, #0b3c91, #1d2951 70%, rgba(29, 41, 81, 0));
     position: relative;
     overflow: hidden; /* 별이 잘리지 않도록 설정 */
 }
