@@ -61,6 +61,34 @@
       </section>
     </header>
 
+    <main>
+      <!-- Event Banner Section -->
+      <section class="event_banner">
+        <div class="slides">
+          <a href="#" class="slide">
+            <img src="e1.png" alt="Event 1" />
+          </a>
+          <a href="#" class="slide">
+            <img src="e2.png" alt="Event 2" />
+          </a>
+          <a href="#" class="slide">
+            <img src="e3.png" alt="Event 3" />
+          </a>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+        <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+
+        <!-- Navigation Bar Indicator -->
+        <div class="bars">
+          <div class="bar" onclick="currentSlide(1)"></div>
+          <div class="bar" onclick="currentSlide(2)"></div>
+          <div class="bar" onclick="currentSlide(3)"></div>
+        </div>
+      </section>
+    </main>
+
     <!-- Script Section -->
     <script src="script.js"></script>
   </body>

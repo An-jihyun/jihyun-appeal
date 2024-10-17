@@ -103,3 +103,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const slideInElements = document.querySelectorAll('.slide_in_text');
   slideInElements.forEach((el) => observer.observe(el));
 });
+
+//10.17
+let currentSlideIndex = 0;
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('.bar');
+
+// Show the first slide initially
+showSlide(currentSlideIndex);
+
+function showSlide(index) {
+  let totalSlides = slides.length;
+  if (index >= totalSlides) currentSlideIndex = 0;
+  if (index < 0) currentSlideIndex = totalSlides - 1;
+
+  // Shift the slides container based on current index
+  document.querySelector('.slides').style.transform = `translateX(${-currentSlideIndex * 100}%)`;
+
+  // Update dots
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentSlideIndex].classList.add('active');
+}
+
+function moveSlide(n) {
+  currentSlideIndex += n;
+  showSlide(currentSlideIndex);
+}
+
+function currentSlide(n) {
+  currentSlideIndex = n - 1;
+  showSlide(currentSlideIndex);
+}
+
+// Auto-slide every 5 seconds
+setInterval(() => {
+  moveSlide(1);
+}, 5000);
