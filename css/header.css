@@ -1,5 +1,7 @@
 .header {
     background: linear-gradient(180deg, #0b3c91, #1d2951 70%, rgba(29, 41, 81, 0));
+    width: 100%;
+    height: 70%;
     position: relative;
     overflow: hidden; /* 별이 잘리지 않도록 설정 */
 }
@@ -33,7 +35,7 @@
 
 /* 각 문장의 글자 크기 조정 및 길이 맞추기 */
 .header_title p:nth-child(1) {
-    font-size: 5rem; /* 첫 번째 문장의 글자 크기 */
+    font-size: 4.3rem; /* 첫 번째 문장의 글자 크기 */
     letter-spacing: 0.02em; /* 자간 조정으로 시작과 끝을 맞춤 */
 }
 
@@ -43,7 +45,7 @@
 }
 
 .header_title p:nth-child(3) {
-    font-size: 7rem; /* 세 번째 문장의 글자 크기 */
+    font-size: 7.25rem; /* 세 번째 문장의 글자 크기 */
     letter-spacing: 0.02em; /* 자간 조정 */
 }
 

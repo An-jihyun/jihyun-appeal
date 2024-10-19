@@ -1,4 +1,4 @@
-import { createStars } from './stars.js';
+import { createStars } from './star.js';
 import { createShootingStar, startShootingStars } from './shootingStars.js';
 import { setupIntersectionObserver, setupCommentAnimation } from './animations.js';
 import { showSlide, startAutoSlide } from './slides.js';
