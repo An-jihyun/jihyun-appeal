@@ -1,0 +1,105 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: nowrap; /* Flexbox will keep items in a row */
+}
+
+/* Logo Styles */
+.navbar__logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Menu Styles */
+.navbar__menu {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Add spacing between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.navbar__menu a:hover {
+    color: #007BFF;
+}
+
+/* Profile Section */
+.navbar__profile {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__username {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    color: black;
+}
+
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+/* Search Bar */
+.navbar__search-container {
+    display: none; /* Initially hidden on smaller screens */
+}
+
+.navbar__search {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 200px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 800px) {
+    .navbar__search-container {
+        display: block; /* Show search bar on wider screens */
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .navbar__menu {
+        gap: 10px;
+    }
+
+    .navbar__search-container {
+        display: none; /* Hide search bar on smaller screens */
+    }
+
+    /* For smaller screens, ensure proper spacing */
+    .navbar {
+        padding: 10px;
+        justify-content: space-around;
+        /* background-color: #007BFF;
+        화면 줄이면 깨지는 배치 해결해야함 */
+    }
+
+    /* Ensure logo and profile stay in place on smaller screens */
+    .navbar__logo a,
+    .navbar__profile {
+        margin-right: 10px;
+    }
+}
