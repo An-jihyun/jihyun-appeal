@@ -22,21 +22,21 @@
 
 @media (min-width: 768px) {
     /* 화면이 768px 이상일 때 */
-    .item {
+    .pitem {
         width: 23%;
     }
 }
 
 @media (max-width: 767px) {
     /* 화면이 767px 이하일 때 */
-    .item {
+    .pitem {
         width: 48%;
     }
 }
 
 @media (max-width: 480px) {
     /* 화면이 480px 이하일 때 */
-    .item {
+    .pitem {
         width: 100%;
     }
 }
