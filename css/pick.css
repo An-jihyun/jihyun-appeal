@@ -1,0 +1,42 @@
+.container_pick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pitem {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.pitem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    /* 화면이 768px 이상일 때 */
+    .item {
+        width: 23%;
+    }
+}
+
+@media (max-width: 767px) {
+    /* 화면이 767px 이하일 때 */
+    .item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 화면이 480px 이하일 때 */
+    .item {
+        width: 100%;
+    }
+}
