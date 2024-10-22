@@ -22,7 +22,7 @@
 }
 
 .popitem img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -38,33 +38,3 @@
     font-size: 1em;
 }
 
-/* 미디어 쿼리 */
-@media (max-width: 768px) {
-    .popitem {
-        width: 120px;
-    }
-
-    .popitem img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .popitem p {
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
-    .popitem {
-        width: 100px;
-    }
-
-    .popitem img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .popitem p {
-        font-size: 0.8em;
-    }
-}

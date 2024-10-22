@@ -73,33 +73,3 @@
     font-size: 14px;
 }
 
-/* Responsive Design */
-@media screen and (min-width: 800px) {
-    .navbar__search-container {
-        display: block; /* Show search bar on wider screens */
-    }
-}
-
-@media screen and (max-width: 799px) {
-    .navbar__menu {
-        gap: 10px;
-    }
-
-    .navbar__search-container {
-        display: none; /* Hide search bar on smaller screens */
-    }
-
-    /* For smaller screens, ensure proper spacing */
-    .navbar {
-        padding: 10px;
-        justify-content: space-around;
-        /* background-color: #007BFF;
-        화면 줄이면 깨지는 배치 해결해야함 */
-    }
-
-    /* Ensure logo and profile stay in place on smaller screens */
-    .navbar__logo a,
-    .navbar__profile {
-        margin-right: 10px;
-    }
-}

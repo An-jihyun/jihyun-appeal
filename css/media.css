@@ -1,16 +1,97 @@
-@media screen and (max-width: 768px) {
-    .navbar{
-        flex-direction: column;  /* #1 */
-        align-items: flex-start; /* #2 */
-				padding: 8px 24px; /* #6 */
+/* 미디어 쿼리 */
+
+/* 화면이 768px 이하일 때 */
+@media (max-width: 768px) {
+    .popitem {
+        width: 120px;
     }
+
+    .popitem img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .popitem p {
+        font-size: 0.9em;
+    }
+
+    .pitem {
+        width: 48%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
     .navbar__menu {
-        flex-direction: column; /* #2 */
-        align-items:center; /* #2 */
-        width: 100%; /* #3 */
-    }
-    .navbar__menu li { /* #5 */
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        text-align : center;
-    }  
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__search-container {
+        display: none;
+    }
+
+    .navbar__logo a,
+    .navbar__profile {
+        margin-right: 10px;
+    }
+}
+
+/* 화면이 480px 이하일 때 */
+@media (max-width: 480px) {
+    .popitem {
+        width: 100px;
+    }
+
+    .popitem img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .popitem p {
+        font-size: 0.8em;
+    }
+
+    .pitem {
+        width: 100%;
+    }
+}
+
+/* 화면이 768px 이상일 때 */
+@media (min-width: 768px) {
+    .pitem {
+        width: 23%;
+    }
+
+    .navbar__search-container {
+        display: block;
+    }
+}
+
+/* 화면이 799px 이하일 때 */
+@media screen and (max-width: 799px) {
+    .navbar__menu {
+        gap: 10px;
+    }
+
+    .navbar {
+        padding: 10px;
+        justify-content: space-around;
+    }
+}
+
+/* 화면이 800px 이상일 때 */
+@media screen and (min-width: 800px) {
+    .navbar__search-container {
+        display: block;
+    }
 }
