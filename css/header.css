@@ -1,29 +1,133 @@
-/* 중복된 @keyframes 정의 제거 */
-@keyframes commentPop {
+.header {
+    background: linear-gradient(180deg, #0b3c91, #1d2951 70%, rgba(29, 41, 81, 0));
+    width: 100%;
+    height: 70%;
+    position: relative;
+    overflow: hidden; /* 별이 잘리지 않도록 설정 */
+}
+
+/* Header Styles */
+.header_title {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    /* background: linear-gradient(180deg, #0b3c91, #1d2951 70%, #26375f); */
+    overflow: hidden;
+    padding-top: 100px;
+
+}
+/* 텍스트 스타일 */
+.header_title p {
+
+    margin: 5px 0; /* 위아래 간격 줄이기 */
+    text-align: center;
+    white-space: nowrap;
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 각 문장의 글자 크기 조정 및 길이 맞추기 */
+.header_title p:nth-child(1) {
+    font-size: 4.3rem; /* 첫 번째 문장의 글자 크기 */
+    letter-spacing: 0.02em; /* 자간 조정으로 시작과 끝을 맞춤 */
+}
+
+.header_title p:nth-child(2) {
+    font-size: 6.5rem; /* 두 번째 문장의 글자 크기 */
+    letter-spacing: 0.02em; /* 자간 조정 */
+}
+
+.header_title p:nth-child(3) {
+    font-size: 7.25rem; /* 세 번째 문장의 글자 크기 */
+    letter-spacing: 0.02em; /* 자간 조정 */
+}
+
+/* 텍스트 튕김 효과 */
+@keyframes bounce {
     0% {
-        transform: scale(0.2);
+        transform: translateY(-100px);
         opacity: 0;
     }
-    70% {
-        transform: scale(1.2);
+    50% {
+        transform: translateY(0);
         opacity: 1;
     }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* 중복된 @keyframes pushUp 제거 */
-@keyframes pushUp {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
+    75% {
         transform: translateY(-10px);
     }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-/* 말풍선 스타일 */
+.header_title p {
+    animation: bounce 2s ease-in-out;
+}
+
+/* 네모 div 스타일 */
+.square {
+    width: 30rem;
+    height: 150px;
+    border-radius: 25px;
+    box-shadow: #051e4c 5px 8px 10px;
+    background-color: #ffffffe7;
+    position: relative;
+    margin: 0 auto;
+    top: -200px; /* 네모 div가 초기에 화면 위로 숨겨짐 */
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease; /* 슬라이드와 투명도 변화 */
+}
+
+.square_profile {
+    background-color: #5277b6;
+    border-radius: 28px 28px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.square_img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.square_content {
+    width: 100%;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.7rem;
+}
+
+/* 네모 div가 나타날 때 */
+.square.show {
+    transform: translateY(200px); /* 네모 div가 아래로 내려옴 */
+    opacity: 1; /* 네모 div가 보임 */
+}
+
+.comments {
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
 .comment {
     width: 150px;
     height: 50px;
@@ -40,25 +144,83 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.5s ease, transform 0.2s ease;
     will-change: transform; /* 성능 최적화 */
-    animation: commentPop 0.7s ease-out forwards;
 }
 
-/* 자주 사용되는 속성을 합쳐 최적화 */
+/* 말풍선 꼬리 추가 */
+.comment::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    margin-left: 30%;
+}
+
+/* "뿅뿅" 하고 올라오는 애니메이션 */
+@keyframes commentPop {
+    0% {
+        transform: scale(0.2) translateY(200px);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2) translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
 .comment.bubble {
     animation: commentPop 0.7s ease-out forwards;
 }
 
-.comment.shifted {
+/* .comment.shifted {
     animation: pushUp 0.5s ease-out forwards;
+} */
+
+@keyframes pushUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
-/* 지그재그 애니메이션 충돌 수정 */
+/* 말풍선 스타일 조정 */
+.bubble {
+    border-radius: 50px;
+    position: relative;
+    padding: 10px;
+    background-color: salmon;
+}
+
+@keyframes commentBubble {
+    0% {
+        transform: scale(0.5) translateY(300px);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) translateY(100px); /* 부풀어오르는 효과 */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* 지그재그 효과 */
 .comment:nth-child(odd) {
-    animation: commentPop 1s ease-out forwards, zigzagRight 1s ease-out forwards;
+    animation: commentBubble 1s ease-out forwards, zigzagRight 1s ease-out forwards;
 }
 
 .comment:nth-child(even) {
-    animation: commentPop 1s ease-out forwards, zigzagLeft 1s ease-out forwards;
+    animation: commentBubble 1s ease-out forwards, zigzagLeft 1s ease-out forwards;
 }
 
 @keyframes zigzagRight {
@@ -79,55 +241,22 @@
     }
 }
 
-/* 중복된 bubble 스타일 제거 및 통합 */
 .bubble {
     border-radius: 50px;
-    background-color: salmon;
-    padding: 10px;
-    position: relative;
 }
 
-/* 별 애니메이션 */
-.star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: white;
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: twinkle 2s infinite ease-in-out alternate;
-    z-index: 10; /* 별이 다른 요소들 위에 나타나도록 설정 */
-}
-  
-@keyframes shootingStar {
+@keyframes commentPop {
     0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-300px, 300px);
+        transform: scale(0.2);
         opacity: 0;
     }
-}
-
-@keyframes twinkle {
-    0% {
-        opacity: 0.5;
-    }
-    100% {
+    70% {
+        transform: scale(1.2);
         opacity: 1;
     }
-}
-
-/* 중복된 정의 제거 */
-.explosion-circle {
-    width: 10px;
-    height: 10px;
-    background-color: #ff6347;
-    border-radius: 50%;
-    position: absolute;
-    opacity: 0;
-    animation: explosion 0.5s ease-out forwards;
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes explosion {
@@ -140,3 +269,135 @@
         opacity: 0;
     }
 }
+
+.explosion-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    animation: explosion 0.5s ease-out forwards;
+}
+
+.comment.shifted {
+    animation: pushUp 0.5s ease-out forwards;
+}
+
+@keyframes pushUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+/* 스크롤 시 나타날 문구 스타일 */
+.scrolling_section {
+    height: 50%; /* 스크롤 가능한 높이 */
+    display: flex;
+    width: 90%;
+    position: absolute;
+    justify-content: space-between;
+    margin: 0px 3rem;
+}
+
+.slide_in_text {
+    position: relative;
+    font-size: 1.2rem;
+    opacity: 0; /* 초기 상태에서 보이지 않음 */
+    transform: translateX(0);
+    transition: transform 3s ease, opacity 1s ease;
+    text-align: center;
+    white-space: nowrap;
+    color: #ffffff;
+    margin: 100px 0;
+
+}
+
+.left {
+    transform: translateX(-100%); /* 왼쪽에서 시작 */
+  }
+  
+  .right {
+    transform: translateX(100%); /* 오른쪽에서 시작 */
+  }
+  
+  /* 애니메이션 적용 시 */
+  .show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+/* 직사각형 링크 스타일 */
+.rectangles_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 50%;
+}
+
+.rectangles_section p {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.86);
+    white-space: nowrap;
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rectangle {
+    width: 45rem;
+    height: 10rem;
+    background-color: #1a3fac42;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 10rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.rectangle.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out alternate;
+    z-index: 10; /* 별이 다른 요소들 위에 나타나도록 설정 */
+}
+  
+  @keyframes shootingStar {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-300px, 300px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
