@@ -12,7 +12,6 @@
     justify-content: center;
     height: 20rem;
     align-items: center;
-    background-color: tomato;
 }
 
 .header_title_img img{
@@ -21,57 +20,37 @@
 }
 
 .header_title_img img:nth-child(1){
-    margin-right: -100px;
+    margin-right: -110px;
     margin-top: 40px;
 }
 
-.header_title_img img:nth-child(2) {
-
-}
-
 .header_title_img img:nth-child(3) {
-    margin-left: -100px;
+    margin-left: -110px;
     margin-top: 20px;
 }
 
-
-
-
-
 .header_title_p {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    /* background: linear-gradient(180deg, #0b3c91, #1d2951 70%, #26375f); */
-    overflow: hidden;
-    padding-top: 100px;
-
+    margin-top: -50px;
 }
-/* 텍스트 스타일 */
-.header_title_p p {
 
+.header_title_p p {
     margin: 5px 0; /* 위아래 간격 줄이기 */
     text-align: center;
     white-space: nowrap;
     font-family: "Black Han Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: white;
 }
 
 /* 각 문장의 글자 크기 조정 및 길이 맞추기 */
 .header_title_p p:nth-child(1) {
-    font-size: 4.3rem; /* 첫 번째 문장의 글자 크기 */
-    letter-spacing: 0.02em; /* 자간 조정으로 시작과 끝을 맞춤 */
+    font-size: clamp(2rem, 8vw, 5rem); /* 첫 번째 문장의 글자 크기 조정 */
+    letter-spacing: 0.02em; /* 자간 조정 */
 }
 
 .header_title_p p:nth-child(2) {
-    font-size: 7.25rem; /* 두 번째 문장의 글자 크기 */
+    font-size: clamp(3.5rem, 8vw, 5rem); /* 두 번째 문장의 글자 크기 조정 */
     letter-spacing: 0.02em; /* 자간 조정 */
 }
 
