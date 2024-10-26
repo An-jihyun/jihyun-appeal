@@ -1,0 +1,64 @@
+.phone {
+    width: 200px;
+    height: 400px;
+    background-color: #000;
+    border-radius: 20px;
+    position: relative;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+    width: 180px;
+    height: 360px;
+    background-color: #643f3f;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border-radius: 15px;
+}
+
+.camera {
+    width: 15px;
+    height: 15px;
+    background-color: #f50b0b;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.speaker {
+    width: 60px;
+    height: 5px;
+    background-color: #3a0202;
+    border-radius: 5px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+
+.button {
+    width: 15px;
+    height: 15px;
+    background-color: #1cab49;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home-button {
+    width: 40px;
+    height: 40px;
+    background-color: #1b9ced58;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}

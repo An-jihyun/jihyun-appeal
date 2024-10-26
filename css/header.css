@@ -1,7 +1,9 @@
+@import "./phone.css";
+
 .header {
     background: linear-gradient(180deg, #0b3c91, #1d2951 70%, rgba(29, 41, 81, 0));
     width: 100%;
-    height: 70%;
+    height: 100%;
     position: relative;
     overflow: hidden; /* 별이 잘리지 않도록 설정 */
 }
@@ -30,7 +32,7 @@
 }
 
 .header_title_p {
-    margin-top: -50px;
+    margin-top: -45px;
 }
 
 .header_title_p p {
