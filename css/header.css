@@ -1,5 +1,8 @@
+@import "headerExample.css";
+@import "headerExampleText.css";
 @import "./phone.css";
 @import "./headerSlider.css";
+
 
 .header {
     background: linear-gradient(180deg, #0b3c91, #1d2951 70%, rgba(29, 41, 81, 0));

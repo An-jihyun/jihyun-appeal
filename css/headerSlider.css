@@ -1,35 +1,20 @@
-.header_example_slider-container {
-    overflow: hidden;
-    width: 300px; /* 슬라이더의 너비 설정 */
-    height: 500px; /* 슬라이더의 높이 설정 */
-    position: relative;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-}
-
 .header_example_slider {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease;
     position: relative;
+    width: 100px; /*임시*/
+    height: 300px; /* 슬라이더의 높이를 설정 */
+    overflow: hidden; /* 슬라이더 밖의 내용은 숨김 */
+    background-color: rgba(123, 65, 178, 0.327);
+
 }
 
 .header_example_slide {
+    position: absolute;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    opacity: 0; /* 처음에는 모든 슬라이드가 보이지 않도록 설정 */
+    transition: opacity 1s ease; /* 부드러운 전환 효과 */
 }
 
-.header_example_slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.header_example_slide:hover img {
-    transform: translateX(-100px); /* hover 시 왼쪽으로 100px 이동 */
+.header_example_slide.active {
+    opacity: 1; /* 현재 슬라이드는 보이도록 설정 */
 }
