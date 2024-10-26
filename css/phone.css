@@ -1,19 +1,20 @@
-.phone {
-    width: 200px;
-    height: 400px;
+.header_example_phone {
+    width: 350px;
+    height: 600px;
     background-color: #000;
     border-radius: 20px;
     position: relative;
     margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    z-index: 100;
 }
 
 .screen {
-    width: 180px;
-    height: 360px;
-    background-color: #643f3f;
+    width: 330px;
+    height: 520px;
+    background-color: #353535;
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 10px;
     border-radius: 15px;
 }
@@ -21,41 +22,19 @@
 .camera {
     width: 15px;
     height: 15px;
-    background-color: #f50b0b;
+    background-color: #1d1d1d;
     border-radius: 50%;
     position: absolute;
-    top: 8px;
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.speaker {
-    width: 60px;
-    height: 5px;
-    background-color: #3a0202;
-    border-radius: 5px;
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
-}
-
-.button {
-    width: 15px;
-    height: 15px;
-    background-color: #1cab49;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+    
 }
 
 .home-button {
     width: 40px;
     height: 40px;
-    background-color: #1b9ced58;
+    background-color: #181818;
     border-radius: 50%;
     position: absolute;
     bottom: 8px;
