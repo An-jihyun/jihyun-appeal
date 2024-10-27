@@ -7,6 +7,11 @@
     margin: auto;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
     z-index: 100;
+        /* 반응형 변경 방지 */
+    max-width: 350px;
+    max-height: 600px;
+    min-width: 350px;
+    min-height: 600px;
 }
 
 .screen {

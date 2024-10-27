@@ -1,3 +1,11 @@
 .header_example_text {
-    background-color: rgba(0, 0, 0, 0.405);
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: clamp(1rem, 4vw, 4rem);
+    padding-left: 70px;
+    color: rgb(240, 248, 255);
+    letter-spacing: 0.02em; /* 자간 조정 */
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.679);
 }
