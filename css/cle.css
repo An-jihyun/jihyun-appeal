@@ -1,0 +1,39 @@
+.clothesline {
+    display: flex;
+    gap: 30px;
+    border-top: 4px dashed #a8a8a8; /* 빨랫줄 */
+    padding-top: 20px;
+    width: 80%;
+    justify-content: center;
+  }
+  
+  .photo {
+    position: relative;
+    width: 150px;
+    transform: rotate(-3deg); /* 사진 기울임 효과 */
+    transition: transform 0.3s ease;
+  }
+  
+  .photo:hover {
+    transform: rotate(0deg); /* 마우스 오버 시 똑바로 */
+  }
+  
+  .photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 빨랫집게 효과 */
+  .photo::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 24px;
+    background-color: #f2a400;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: 0 -3px 0px #a87800; /* 집게 그림자 */
+  }
