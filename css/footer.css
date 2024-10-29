@@ -1,38 +1,92 @@
+
+
+/* Footer 전체 스타일 */
 footer {
-    background-color: #f8f8f8; /* 푸터 배경색 */
-    padding: 20px;
-    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex;
+    background-color: #FFFFFF;
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #E5E7EB;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    color: #6B7280;
 }
 
-.footer-container {
-    max-width: 1200px; /* 최대 너비 설정 */
-    margin: 0 auto; /* 중앙 정렬 */
-    display: flex; /* 플렉스 박스를 사용하여 레이아웃 조정 */
-    flex-direction: column; /* 세로 방향으로 배치 */
-}
-
+/* Footer 내부 컨테이너: Flex로 좌우 정렬 */
 .footer-info {
-    margin-bottom: 15px; /* 정보와 링크 간의 간격 */
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-right: 150px;
 }
 
-.footer-info p {
-    margin: 5px 0; /* 각 문단 간의 간격 */
+.footer-info > * {
+    margin-bottom: 20px; /* 각 항목 사이의 간격 */
 }
 
+/* 마지막 항목의 하단 여백 제거 */
+.footer-info > *:last-child {
+    margin-bottom: 0;
+}
+
+/* 왼쪽 주소 및 대표 정보 */
+.footer-info__add {
+    flex: 1;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.footer-info__add p {
+    margin: 0;
+}
+
+/* 중앙 대표 및 문의 정보 */
+.footer-info__boss {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.6;
+}
+
+.footer-info__boss p {
+    margin: 0;
+}
+
+.footer-info__boss a {
+    color: #6B7280;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 오른쪽 이용약관 및 저작권 정보 */
 .footer-links {
-    margin: 10px 0; /* 링크들 간의 간격 */
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-left: 150px;
 }
 
 .footer-links a {
-    margin: 0 10px; /* 링크 간의 간격 */
-    text-decoration: none; /* 밑줄 제거 */
-    color: #007bff; /* 링크 색상 */
+    text-decoration: none;
+    color: #6B7280;
 }
 
 .footer-links a:hover {
-    text-decoration: underline; /* 호버 시 밑줄 */
+    color: #2e2e2e;
 }
 
 .copyright {
-    margin-top: 10px; /* 저작권 문구와 링크 간의 간격 */
+    color: #6B7280;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .footer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
