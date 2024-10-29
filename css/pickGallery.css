@@ -144,9 +144,9 @@ h1 {
 .img-wrapper a {
     overflow: hidden;
     display: block;
-    padding: 1vh;
+    padding: 0.5vh;
     background: #424653;
-    box-shadow: 0 10px 50px #050b4582;
+    box-shadow: 0 10px 50px #050b457b;
 }
 
 .img-wrapper img {
@@ -154,7 +154,7 @@ h1 {
     max-height: 50vh;
     transition: .5s;
     vertical-align: top;
-    filter: saturate(40%) sepia(30%) hue-rotate(5deg);
+    filter: brightness(60%) contrast(120%) saturate(50%) sepia(30%) hue-rotate(200deg);
 }
 
 a:hover img {

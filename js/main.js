@@ -3,6 +3,7 @@ import { createShootingStar, startShootingStars } from './shootingStars.js';
 import { setupIntersectionObserver, setupCommentAnimation } from './animations.js';
 import { showSlide, startAutoSlide } from './slides.js';
 import { showHeaderSlide, nextSlide } from './headerSlider.js';
+import { playButton } from './popDreamer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   createStars();
@@ -19,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCommentAnimation();
   showSlide(0);
   startAutoSlide();
+  playButton();
 });
