@@ -37,3 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     dot.addEventListener('click', () => currentSlide(index + 1));
   });
 });
+
+import { moveSeedling } from './sprout.js';
+
+// 마우스 움직임에 반응하여 moveSeedling 함수 호출
+document.addEventListener('mousemove', moveSeedling);
