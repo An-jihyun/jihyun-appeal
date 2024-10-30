@@ -1,0 +1,52 @@
+.popular-dreamer-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popular-dreamer-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.dreamer-list {
+    display: flex;
+    width: 80%;
+    gap: 20px; /* 항목 간 간격 */
+    justify-content: space-around; /* 중앙 정렬 */
+    flex-wrap: nowrap; /* 줄바꿈 방지 */
+}
+
+.dreamer {
+    width: 120px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0; /* padding 제거 */
+    justify-content: space-between;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd; /* 이미지 영역 색상 (이미지 추가 시 제거 가능) */
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.dreamer p {
+    width: 230px;
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left:50px;
+}
