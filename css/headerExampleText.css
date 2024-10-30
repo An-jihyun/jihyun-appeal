@@ -1,4 +1,4 @@
-.header_example_text {
+/* .header_example_text {
     display: flex;
     height: 500px;
     flex-direction: column;
@@ -6,6 +6,89 @@
     font-size: clamp(1rem, 4vw, 4rem);
     padding-left: 200px;
     color: rgb(240, 248, 255);
-    letter-spacing: 0.02em; /* 자간 조정 */
+    letter-spacing: 0.02em;
     text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.679);
+} */
+
+
+/* 기본 스타일 */
+.header_example {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 공통 스타일 */
+.header_example_text_1, .header_example_text_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: clamp(1rem, 4vw, 4rem);
+    color: rgb(240, 248, 255);
+    letter-spacing: 0.02em;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+
+}
+
+/* header_example_text_1에만 적용되는 추가 스타일 */
+.header_example_text_1 {
+    padding-left: 20px;
+    align-items: flex-start;
+    animation-delay: 0.3s; /* 애니메이션 지연 시간 추가 */
+}
+
+/* header_example_text_2에만 적용되는 추가 스타일 */
+.header_example_text_2 {
+    padding-right: 20px;
+    align-items: flex-end;
+    animation-delay: 0.6s; /* 애니메이션 지연 시간 추가 */
+}
+
+
+/* 텍스트 애니메이션 스타일 */
+.header_example_text_1, .header_example_text_2 {
+    position: absolute;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* header_example_text_1: 왼쪽 아래에서 슬라이드 */
+.header_example_text_1 {
+    left: 20px;
+    bottom: 20px;
+    animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* header_example_text_2: 오른쪽 위에서 슬라이드 */
+.header_example_text_2 {
+    right: 20px;
+    top: 20px;
+    animation-name: slideInRight;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
